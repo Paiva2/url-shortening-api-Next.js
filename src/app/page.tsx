@@ -9,6 +9,7 @@ import FullyCustomizableIcon from "./components/icons/FullyCustomizableIcon";
 import {
   AdvancedStatistics,
   BoostYourLinks,
+  Footer,
   GetStartedButton,
   GetStartedContainer,
   GetStartedTitleWrapper,
@@ -19,10 +20,13 @@ import {
   InformationCards,
   LoginHeaderButton,
   LogoWrapper,
+  Sections,
+  SectionsWrapper,
   ShortenALinkContainer,
   SignUpHeaderButton,
+  SocialMediasWrapper,
 } from "./styles";
-import HeaderLogo from "./components/icons/HeaderLogo";
+import ShortlyLogo from "./components/icons/ShortlyLogo";
 
 export default function Home() {
   return (
@@ -30,7 +34,7 @@ export default function Home() {
       <Header>
         <HeaderSectionsWrapper>
           <LogoWrapper>
-            <HeaderLogo />
+            <ShortlyLogo color={"#34313D"} />
             <nav>
               <a href="#">Features</a>
             </nav>
@@ -49,7 +53,14 @@ export default function Home() {
         </HeaderSectionsWrapper>
       </Header>
 
-      <div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
         <GetStartedContainer>
           <GetStartedWrapper>
             <GetStartedTitleWrapper>
@@ -98,7 +109,7 @@ export default function Home() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              padding: "20px",
+              paddingBottom: "50px",
               gap: "40px",
             }}
           >
@@ -138,47 +149,49 @@ export default function Home() {
         </div>
 
         <BoostYourLinks>
-          <h1>Boost your links today</h1>
+          <p>Boost your links today</p>
           <button>Get Started</button>
         </BoostYourLinks>
 
-        <footer>
-          <h2>Shortly</h2>
+        <Footer>
+          <Sections>
+            <SectionsWrapper>
+              <ShortlyLogo color="#fff" />
 
-          <div>
-            <div>
-              <h3>Features</h3>
+              <div>
+                <p>Features</p>
 
-              <p>Link Shortening</p>
-              <p>Branded Links</p>
-              <p>Analytics</p>
-            </div>
+                <p>Link Shortening</p>
+                <p>Branded Links</p>
+                <p>Analytics</p>
+              </div>
 
-            <div>
-              <h3>Resources</h3>
+              <div>
+                <p>Resources</p>
 
-              <p>Blog</p>
-              <p>Developers</p>
-              <p>Support</p>
-            </div>
+                <p>Blog</p>
+                <p>Developers</p>
+                <p>Support</p>
+              </div>
 
-            <div>
-              <h3>Company</h3>
+              <div>
+                <p>Company</p>
 
-              <p>About</p>
-              <p>Our Team</p>
-              <p>Careers</p>
-              <p>Contact</p>
-            </div>
+                <p>About</p>
+                <p>Our Team</p>
+                <p>Careers</p>
+                <p>Contact</p>
+              </div>
 
-            <div>
-              <ImFacebook2 />
-              <ImTwitter />
-              <ImPinterest />
-              <BsInstagram />
-            </div>
-          </div>
-        </footer>
+              <SocialMediasWrapper>
+                <ImFacebook2 />
+                <ImTwitter />
+                <ImPinterest />
+                <BsInstagram />
+              </SocialMediasWrapper>
+            </SectionsWrapper>
+          </Sections>
+        </Footer>
       </div>
     </>
   );

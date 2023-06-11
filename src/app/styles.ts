@@ -225,4 +225,98 @@ export const InformationCards = styled.div`
   }
 `;
 
-export const BoostYourLinks = styled.div``;
+export const BoostYourLinks = styled.div`
+  width: 100%;
+  display: flex;
+  min-height: 300px;
+  gap: 20px;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: hsl(257, 27%, 26%);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1440' height='250'%3E%3Cg fill='%234B3F6B' fill-rule='evenodd'%3E%3Cpath d='M830-63.482C830 19.351 854.36 78.678 944.732 117c90.371 38.321 177.686 3.352 265.277 23.4 87.59 20.048 87.59 149.195 170.077 228.671 82.486 79.476 256.405 98.781 397.82 18.15 141.415-80.632 205.52-268.896 163.267-379.902C1898.919-103.687 1817.943-205 1427.236-205S830-146.314 830-63.482zM-263.351 570.909c29.685 77.331 73.689 123.988 171.79 127.377 98.102 3.39 167.085-60.547 256.043-73.22 88.958-12.674 135.24 107.895 240.73 152.532 105.488 44.638 274.775.333 377.9-125.622C886.24 526.021 878.62 327.29 799.392 238.798 720.162 150.307 608.257 84.743 243.5 224.76c-364.757 140.017-536.537 268.818-506.852 346.149zM-514-377.482c0 82.833 24.36 142.16 114.732 180.482 90.371 38.321 177.686 3.352 265.277 23.4 87.59 20.048 87.59 149.195 170.077 228.671 82.486 79.476 256.405 98.781 397.82 18.15 141.415-80.632 205.52-268.896 163.267-379.902C554.919-417.687 473.943-519 83.236-519S-514-460.314-514-377.482z'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  background-size: cover;
+
+  p {
+    font-size: 45px;
+    font-weight: 700;
+  }
+
+  button {
+    all: unset;
+    text-align: center;
+    border-radius: 9999px;
+    font-size: 18px;
+    padding: 10px;
+    width: 150px;
+    height: 25px;
+    cursor: pointer;
+    background-color: hsl(180, 66%, 49%);
+  }
+`;
+
+export const Footer = styled.footer`
+  width: 100%;
+  background: hsl(260, 8%, 14%);
+  color: #fff;
+  font-size: 18px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+`;
+
+export const Sections = styled.div`
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const SectionsWrapper = styled.div`
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    p {
+      cursor: pointer;
+
+      &:hover {
+        color: hsl(180, 66%, 49%);
+      }
+    }
+
+    p:first-child {
+      font-weight: 700;
+      margin-bottom: 15px;
+      cursor: unset !important;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+`;
+
+export const SocialMediasWrapper = styled.div`
+  display: flex;
+  flex-direction: row !important;
+  gap: 20px !important;
+
+  svg {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+
+    &:hover {
+      color: hsl(180, 66%, 49%);
+    }
+  }
+`;

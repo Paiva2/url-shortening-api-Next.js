@@ -1,80 +1,146 @@
-import Image from "next/image";
+"use client";
 
-
+import { ImFacebook2, ImTwitter, ImPinterest } from "react-icons/im";
+import { BsInstagram } from "react-icons/bs";
 import IllustrationWorking from "./components/icons/IllustrationWorking";
 import BrandRecognitionIcon from "./components/icons/BrandRecognitionIcon";
 import DetailedRecordsIcon from "./components/icons/DetailedRecordsIcon";
 import FullyCustomizableIcon from "./components/icons/FullyCustomizableIcon";
-import { ImFacebook2, ImTwitter, ImPinterest } from "react-icons/im";
-import { BsInstagram } from "react-icons/bs";
+import {
+  AdvancedStatistics,
+  BoostYourLinks,
+  GetStartedButton,
+  GetStartedContainer,
+  GetStartedTitleWrapper,
+  GetStartedWrapper,
+  Header,
+  HeaderButtonsWrapper,
+  HeaderSectionsWrapper,
+  InformationCards,
+  LoginHeaderButton,
+  LogoWrapper,
+  ShortenALinkContainer,
+  SignUpHeaderButton,
+} from "./styles";
+import HeaderLogo from "./components/icons/HeaderLogo";
 
 export default function Home() {
   return (
     <>
-    <header>
-      <h1>Shortly</h1>
+      <Header>
+        <HeaderSectionsWrapper>
+          <LogoWrapper>
+            <HeaderLogo />
+            <nav>
+              <a href="#">Features</a>
+            </nav>
+            <nav>
+              <a href="#">Pricing</a>
+            </nav>
+            <nav>
+              <a href="#">Resources</a>
+            </nav>
+          </LogoWrapper>
 
-      <nav>Features</nav>
-      <nav>Pricing</nav>
-      <nav>Resources</nav>
-
-      <div>
-        <button>Login</button>
-        <button>Sign Up</button>
-      </div>
-    </header> 
-
-    <div>
-      <div>
-        <h1>More than just shorter links</h1>
-
-        <p>Build your brand's recognition and get detailed insights on how
-            your links are performing.
-        </p>
-
-        <button>Get Started</button>
-      </div>
-
-      <span>
-        <IllustrationWorking />
-      </span>
+          <HeaderButtonsWrapper>
+            <LoginHeaderButton>Login</LoginHeaderButton>
+            <SignUpHeaderButton>Sign Up</SignUpHeaderButton>
+          </HeaderButtonsWrapper>
+        </HeaderSectionsWrapper>
+      </Header>
 
       <div>
-        <input type="text" placeholder="Shorten a link here..." />
+        <GetStartedContainer>
+          <GetStartedWrapper>
+            <GetStartedTitleWrapper>
+              <div>
+                <p>More than just shorter links</p>
+                <p>
+                  Build your brand's recognition and get detailed insights on how
+                  your links are performing.
+                </p>
+              </div>
+              <span>
+                <GetStartedButton>Get Started</GetStartedButton>
+              </span>
+            </GetStartedTitleWrapper>
+          </GetStartedWrapper>
 
-        <button>Shorten it!</button>
-      </div>
+          <IllustrationWorking />
+        </GetStartedContainer>
 
-        <div>
-          <h1>Advanced Statistics</h1>
-          <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
+        <div
+          style={{
+            backgroundColor: "#EFF1F7",
+            width: "100%",
+            alignItems: "center",
+            justifyContent: "center",
+            display: "flex",
+            flexDirection: "column",
+            gap: "30px",
+          }}
+        >
+          <ShortenALinkContainer>
+            <input type="text" placeholder="Shorten a link here..." />
+            <button>Shorten it!</button>
+          </ShortenALinkContainer>
+
+          <AdvancedStatistics>
+            <p>Advanced Statistics</p>
+            <p>
+              Track how your links are performing across the web with our advanced
+              statistics dashboard.
+            </p>
+          </AdvancedStatistics>
+
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              padding: "20px",
+              gap: "40px",
+            }}
+          >
+            <InformationCards>
+              <div>
+                <BrandRecognitionIcon />
+              </div>
+              <h1>Brand Recognition</h1>
+              <p>
+                Boost your brand recognition with each click. Generic links dont mean
+                a thing. Branded links help instil confidence in your content.
+              </p>
+            </InformationCards>
+
+            <InformationCards>
+              <div>
+                <DetailedRecordsIcon />
+              </div>
+              <h1>Detailed Records</h1>
+              <p>
+                Gain insights into who is clicking your links. Knowing when and where
+                people engage with your content helps inform better decisions.
+              </p>
+            </InformationCards>
+
+            <InformationCards>
+              <div>
+                <FullyCustomizableIcon />
+              </div>
+              <h1>Fully Customizable</h1>
+              <p>
+                Improve brand awareness and content discoverability through
+                customizable links, supercharging audience engagement.
+              </p>
+            </InformationCards>
+          </div>
         </div>
 
-        <div>
-
-          <div>
-          <BrandRecognitionIcon />
-            <h1>Brand Recognition</h1>
-            <p></p>
-          </div>
-
-          <div>
-            <DetailedRecordsIcon />
-            <h1>Detailed Records</h1>
-            <p></p>
-          </div>
-
-          <div>
-            <FullyCustomizableIcon />
-            <h1>Fully Customizable</h1>
-            <p></p>
-          </div>
-        </div>
-
-        <div>
+        <BoostYourLinks>
           <h1>Boost your links today</h1>
           <button>Get Started</button>
-        </div>
+        </BoostYourLinks>
 
         <footer>
           <h2>Shortly</h2>
@@ -113,7 +179,7 @@ export default function Home() {
             </div>
           </div>
         </footer>
-    </div>
+      </div>
     </>
-  )
+  );
 }

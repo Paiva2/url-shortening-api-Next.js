@@ -5,12 +5,12 @@ const IllustrationWorking = () => {
     <svg xmlns="http://www.w3.org/2000/svg" width="733" height="482">
       <defs>
         <linearGradient id="a" x1="0%" x2="100%" y1="50%" y2="50%">
-          <stop offset="0%" stop-color="#183866" />
-          <stop offset="100%" stop-color="#1A7FC1" />
+          <stop offset="0%" stopColor="#183866" />
+          <stop offset="100%" stopColor="#1A7FC1" />
         </linearGradient>
         <linearGradient id="b" x1="-.13%" x2="100%" y1="50.057%" y2="50.057%">
           <stop offset="0%" />
-          <stop offset="99%" stop-opacity="0" />
+          <stop offset="99%" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="c"
@@ -20,7 +20,7 @@ const IllustrationWorking = () => {
           y2="-534.629%"
         >
           <stop offset="0%" />
-          <stop offset="99%" stop-opacity="0" />
+          <stop offset="99%" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="d"
@@ -30,11 +30,11 @@ const IllustrationWorking = () => {
           y2="-277.344%"
         >
           <stop offset="0%" />
-          <stop offset="99%" stop-opacity="0" />
+          <stop offset="99%" stopOpacity="0" />
         </linearGradient>
         <linearGradient id="e" x1="156.099%" x2="8.109%" y1="-63.273%" y2="-76.114%">
           <stop offset="0%" />
-          <stop offset="99%" stop-opacity="0" />
+          <stop offset="99%" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="f"
@@ -44,7 +44,7 @@ const IllustrationWorking = () => {
           y2="-16647.547%"
         >
           <stop offset="0%" />
-          <stop offset="99%" stop-opacity="0" />
+          <stop offset="99%" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="g"
@@ -54,11 +54,11 @@ const IllustrationWorking = () => {
           y2="-412.195%"
         >
           <stop offset="0%" />
-          <stop offset="99%" stop-opacity="0" />
+          <stop offset="99%" stopOpacity="0" />
         </linearGradient>
         <linearGradient id="h" x1="106.85%" x2="-35.821%" y1="22.502%" y2="19.27%">
           <stop offset="0%" />
-          <stop offset="100%" stop-opacity="0" />
+          <stop offset="100%" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="i"
@@ -67,20 +67,20 @@ const IllustrationWorking = () => {
           y1="-41.335%"
           y2="-41.335%"
         >
-          <stop offset="0%" stop-color="#183866" />
-          <stop offset="100%" stop-color="#1A7FC1" />
+          <stop offset="0%" stopColor="#183866" />
+          <stop offset="100%" stopColor="#1A7FC1" />
         </linearGradient>
         <linearGradient id="j" x1="40.386%" x2="71.43%" y1="39.515%" y2="67.977%">
           <stop offset="0%" />
-          <stop offset="99%" stop-opacity="0" />
+          <stop offset="99%" stopOpacity="0" />
         </linearGradient>
         <linearGradient id="k" x1="-12.531%" x2="93.689%" y1="44.923%" y2="53.42%">
           <stop offset="0%" />
-          <stop offset="99%" stop-opacity="0" />
+          <stop offset="99%" stopOpacity="0" />
         </linearGradient>
         <linearGradient id="l" x1="53.702%" x2="43.721%" y1="42.271%" y2="80.595%">
           <stop offset="0%" />
-          <stop offset="99%" stop-opacity="0" />
+          <stop offset="99%" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="m"
@@ -90,7 +90,7 @@ const IllustrationWorking = () => {
           y2="-335.028%"
         >
           <stop offset="0%" />
-          <stop offset="99%" stop-opacity="0" />
+          <stop offset="99%" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="n"
@@ -100,11 +100,11 @@ const IllustrationWorking = () => {
           y2="-126.942%"
         >
           <stop offset="0%" />
-          <stop offset="99%" stop-opacity="0" />
+          <stop offset="99%" stopOpacity="0" />
         </linearGradient>
         <linearGradient id="o" x1="56.989%" x2="28.128%" y1="43.618%" y2="69.958%">
           <stop offset="0%" />
-          <stop offset="99%" stop-opacity="0" />
+          <stop offset="99%" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="p"
@@ -114,12 +114,12 @@ const IllustrationWorking = () => {
           y2="-1370.204%"
         >
           <stop offset="0%" />
-          <stop offset="99%" stop-opacity="0" />
+          <stop offset="99%" stopOpacity="0" />
         </linearGradient>
         <linearGradient id="q" x1="-.04%" x2="99.996%" y1="49.993%" y2="49.993%">
-          <stop offset="0%" stop-color="#ECC4D7" />
-          <stop offset="42%" stop-color="#EFD4D1" />
-          <stop offset="100%" stop-color="#F2EAC9" />
+          <stop offset="0%" stopColor="#ECC4D7" />
+          <stop offset="42%" stopColor="#EFD4D1" />
+          <stop offset="100%" stopColor="#F2EAC9" />
         </linearGradient>
         <linearGradient
           id="r"
@@ -128,9 +128,9 @@ const IllustrationWorking = () => {
           y1="-163.287%"
           y2="-163.287%"
         >
-          <stop offset="0%" stop-color="#ECC4D7" />
-          <stop offset="42%" stop-color="#EFD4D1" />
-          <stop offset="100%" stop-color="#F2EAC9" />
+          <stop offset="0%" stopColor="#ECC4D7" />
+          <stop offset="42%" stopColor="#EFD4D1" />
+          <stop offset="100%" stopColor="#F2EAC9" />
         </linearGradient>
         <linearGradient
           id="s"
@@ -139,13 +139,13 @@ const IllustrationWorking = () => {
           y1="-84.564%"
           y2="-84.564%"
         >
-          <stop offset="0%" stop-color="#ECC4D7" />
-          <stop offset="42%" stop-color="#EFD4D1" />
-          <stop offset="100%" stop-color="#F2EAC9" />
+          <stop offset="0%" stopColor="#ECC4D7" />
+          <stop offset="42%" stopColor="#EFD4D1" />
+          <stop offset="100%" stopColor="#F2EAC9" />
         </linearGradient>
         <linearGradient id="t" x1="128.89%" x2="24.06%" y1="100.36%" y2="153.095%">
-          <stop offset="0%" stop-color="#362958" stop-opacity=".501" />
-          <stop offset="100%" stop-color="#34313D" stop-opacity="0" />
+          <stop offset="0%" stopColor="#362958" stopOpacity=".501" />
+          <stop offset="100%" stopColor="#34313D" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="u"
@@ -155,10 +155,10 @@ const IllustrationWorking = () => {
           y2="-34268.317%"
         >
           <stop offset="0%" />
-          <stop offset="99%" stop-opacity="0" />
+          <stop offset="99%" stopOpacity="0" />
         </linearGradient>
       </defs>
-      <g fill="none" fill-rule="nonzero">
+      <g fill="none" fillRule="nonzero">
         <path
           fill="#EFF1F7"
           d="M583.08 92.214c-20.973-22.385-37.208-49.107-62.275-67.375-39.374-28.754-96.041-31.558-142.08-13.494-46.04 18.063-81.905 54.474-105.544 95.703-12.435 21.692-22.202 45.354-40.423 63.08-15.403 14.976-35.648 24.531-54.843 34.938-30.948 16.733-60.752 36.952-80.78 64.695-20.026 27.743-28.98 64.18-16.178 95.446 8.633 21.097 26.022 37.883 43.836 53.081 20.964 17.869 43.496 34.601 69.5 45.248 32.555 13.246 68.694 16.094 104.134 17.442 62.828 2.38 125.757.601 188.319-5.323 51.23-4.844 104.011-13.113 146.874-39.88 60.043-37.484 91-106.163 97.97-173.51 2.836-26.936 2.118-54.928-8.964-79.92-26.504-59.78-98.017-45.798-139.547-90.131z"

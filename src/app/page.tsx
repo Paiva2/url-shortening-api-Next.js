@@ -30,16 +30,39 @@ import {
   SocialMediasWrapper,
 } from "./styles";
 import ShortlyLogo from "./components/icons/ShortlyLogo";
-import { useQuery } from "react-query";
+import { useState } from "react";
+import { apiMethod } from "./lib/axios";
+
+interface SearchedLinksInterface {
+  originalLink: string;
+  shortenLink: string;
+}
 
 export default function Home() {
-  // Fetcher function
-  const getFacts = async () => {
-    const res = await fetch("https://random-facts2.p.rapidapi.com/getfact");
-    return res.json();
+  const [shortenItInput, setShortenItInput] = useState("");
+  const [searchedLinks, setSearchedLinks] = useState<Array<SearchedLinksInterface>>(
+    []
+  );
+
+  const handleGetUrl = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!shortenItInput) return alert("Insert a link!");
+
+    apiMethod.get(`shorten?url=${shortenItInput}`).then((res) => {
+      setSearchedLinks((oldLinks) => {
+        return [
+          ...oldLinks,
+          {
+            originalLink: res.data.result.original_link,
+            shortenLink: res.data.result.short_link,
+          },
+        ];
+      });
+    });
   };
-  // Using the hook
-  const { data, error, isLoading } = useQuery("randomFacts", getFacts);
+
+  console.log(searchedLinks);
 
   return (
     <>
@@ -103,21 +126,29 @@ export default function Home() {
             gap: "30px",
           }}
         >
-          <ShortenALinkContainer>
-            <input type="text" placeholder="Shorten a link here..." />
-            <button>Shorten it!</button>
+          <ShortenALinkContainer onSubmit={handleGetUrl}>
+            <input
+              onChange={(e) => setShortenItInput(e.target.value)}
+              type="text"
+              placeholder="Shorten a link here..."
+            />
+            <button type="submit">Shorten it!</button>
           </ShortenALinkContainer>
 
-          <ShortenLinkResultsContainer>
-            <p>https://frontendmentor.com.br</p>
+          {searchedLinks.map((link) => {
+            return (
+              <ShortenLinkResultsContainer>
+                <p>{link.originalLink}</p>
 
-            <ShortenLinkWrapper>
-              <a>httas://rel.ink/k4lKyk</a>
-              <CopyButton>Copy</CopyButton>
-            </ShortenLinkWrapper>
-          </ShortenLinkResultsContainer>
+                <ShortenLinkWrapper>
+                  <a>{link.shortenLink}</a>
+                  <CopyButton>Copy</CopyButton>
+                </ShortenLinkWrapper>
+              </ShortenLinkResultsContainer>
+            );
+          })}
 
-          <ShortenLinkResultsContainer>
+          {/*           <ShortenLinkResultsContainer>
             <p>https://frontendmentor.com.br</p>
 
             <ShortenLinkWrapper>
@@ -126,16 +157,7 @@ export default function Home() {
                 Copied!
               </CopyButton>
             </ShortenLinkWrapper>
-          </ShortenLinkResultsContainer>
-
-          <ShortenLinkResultsContainer>
-            <p>https://frontendmentor.com.br</p>
-
-            <ShortenLinkWrapper>
-              <a>httas://rel.ink/k4lKyk</a>
-              <CopyButton>Copy</CopyButton>
-            </ShortenLinkWrapper>
-          </ShortenLinkResultsContainer>
+          </ShortenLinkResultsContainer> */}
 
           <AdvancedStatistics>
             <p>Advanced Statistics</p>

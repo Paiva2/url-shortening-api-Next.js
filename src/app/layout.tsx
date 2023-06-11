@@ -21,10 +21,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <Head>
-        <GlobalStyle />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <QueryClientProvider client={queryClient}>
+        <GlobalStyle />
         <body className={poppins.className}>{children}</body>
       </QueryClientProvider>
     </html>

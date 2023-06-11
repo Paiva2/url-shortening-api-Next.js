@@ -127,7 +127,7 @@ export const GetStartedButton = styled.button`
   }
 `;
 
-export const ShortenALinkContainer = styled.div`
+export const ShortenALinkContainer = styled.form`
   width: 85%;
   display: flex;
   justify-content: center;
@@ -181,6 +181,10 @@ export const ShortenLinkResultsContainer = styled.div`
   gap: 20px;
   border-radius: 10px;
   font-size: 20px;
+
+  p {
+    word-break: break-all;
+  }
 `;
 
 export const ShortenLinkWrapper = styled.div`

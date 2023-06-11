@@ -9,6 +9,7 @@ import FullyCustomizableIcon from "./components/icons/FullyCustomizableIcon";
 import {
   AdvancedStatistics,
   BoostYourLinks,
+  CopyButton,
   Footer,
   GetStartedButton,
   GetStartedContainer,
@@ -23,12 +24,23 @@ import {
   Sections,
   SectionsWrapper,
   ShortenALinkContainer,
+  ShortenLinkResultsContainer,
+  ShortenLinkWrapper,
   SignUpHeaderButton,
   SocialMediasWrapper,
 } from "./styles";
 import ShortlyLogo from "./components/icons/ShortlyLogo";
+import { useQuery } from "react-query";
 
 export default function Home() {
+  // Fetcher function
+  const getFacts = async () => {
+    const res = await fetch("https://random-facts2.p.rapidapi.com/getfact");
+    return res.json();
+  };
+  // Using the hook
+  const { data, error, isLoading } = useQuery("randomFacts", getFacts);
+
   return (
     <>
       <Header>
@@ -95,6 +107,35 @@ export default function Home() {
             <input type="text" placeholder="Shorten a link here..." />
             <button>Shorten it!</button>
           </ShortenALinkContainer>
+
+          <ShortenLinkResultsContainer>
+            <p>https://frontendmentor.com.br</p>
+
+            <ShortenLinkWrapper>
+              <a>httas://rel.ink/k4lKyk</a>
+              <CopyButton>Copy</CopyButton>
+            </ShortenLinkWrapper>
+          </ShortenLinkResultsContainer>
+
+          <ShortenLinkResultsContainer>
+            <p>https://frontendmentor.com.br</p>
+
+            <ShortenLinkWrapper>
+              <a>httas://rel.ink/k4lKyk</a>
+              <CopyButton disabled copied={true}>
+                Copied!
+              </CopyButton>
+            </ShortenLinkWrapper>
+          </ShortenLinkResultsContainer>
+
+          <ShortenLinkResultsContainer>
+            <p>https://frontendmentor.com.br</p>
+
+            <ShortenLinkWrapper>
+              <a>httas://rel.ink/k4lKyk</a>
+              <CopyButton>Copy</CopyButton>
+            </ShortenLinkWrapper>
+          </ShortenLinkResultsContainer>
 
           <AdvancedStatistics>
             <p>Advanced Statistics</p>

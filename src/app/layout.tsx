@@ -3,6 +3,7 @@
 import Head from "next/head";
 import { Poppins } from "next/font/google";
 import { GlobalStyle } from "../config/globalStyles";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 export const metadata = {
   title: "Home",
@@ -14,14 +15,18 @@ const poppins = Poppins({
   subsets: ["latin"],
 });
 
+const queryClient = new QueryClient();
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <Head>
+        <GlobalStyle />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <GlobalStyle />
-      <body className={poppins.className}>{children}</body>
+      <QueryClientProvider client={queryClient}>
+        <body className={poppins.className}>{children}</body>
+      </QueryClientProvider>
     </html>
   );
 }

@@ -42,6 +42,11 @@ export const LoginHeaderButton = styled.button`
   color: hsl(257, 7%, 63%);
   font-weight: 700;
   cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: #9ce2e2;
+  }
 `;
 
 export const SignUpHeaderButton = styled.button`
@@ -55,6 +60,11 @@ export const SignUpHeaderButton = styled.button`
   display: grid;
   place-items: center;
   cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: #9ce2e2;
+  }
 `;
 
 export const GetStartedContainer = styled.div`
@@ -110,6 +120,11 @@ export const GetStartedButton = styled.button`
   display: grid;
   place-items: center;
   cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: #9ce2e2;
+  }
 `;
 
 export const ShortenALinkContainer = styled.div`
@@ -148,6 +163,61 @@ export const ShortenALinkContainer = styled.div`
     width: 10%;
     text-align: center;
     cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: #9ce2e2;
+    }
+  }
+`;
+
+export const ShortenLinkResultsContainer = styled.div`
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 40px;
+  gap: 20px;
+  border-radius: 10px;
+  font-size: 20px;
+`;
+
+export const ShortenLinkWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: hsl(180, 66%, 49%);
+  gap: 20px;
+
+  a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+`;
+
+interface CopyButton {
+  copied?: boolean;
+}
+
+export const CopyButton = styled.button<CopyButton>`
+  all: unset;
+  background-color: ${({ copied }) => (copied ? "#4b3f6b" : "hsl(180, 66%, 49%)")};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 10px;
+  width: 100px;
+  height: 25px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-align: center;
+  cursor: ${({ copied }) => (copied ? "unset" : "pointer")};
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover:not(:disabled) {
+    background-color: #9ce2e2;
   }
 `;
 
@@ -256,6 +326,11 @@ export const BoostYourLinks = styled.div`
     height: 25px;
     cursor: pointer;
     background-color: hsl(180, 66%, 49%);
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: #9ce2e2;
+    }
   }
 `;
 
@@ -287,6 +362,7 @@ export const SectionsWrapper = styled.div`
 
     p {
       cursor: pointer;
+      transition: all 0.2s ease;
 
       &:hover {
         color: hsl(180, 66%, 49%);
@@ -314,6 +390,7 @@ export const SocialMediasWrapper = styled.div`
     width: 22px;
     height: 22px;
     cursor: pointer;
+    transition: all 0.2s ease;
 
     &:hover {
       color: hsl(180, 66%, 49%);

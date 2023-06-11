@@ -30,7 +30,7 @@ import {
   SocialMediasWrapper,
 } from "./styles";
 import ShortlyLogo from "./components/icons/ShortlyLogo";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { apiMethod } from "./lib/axios";
 
 interface SearchedLinksInterface {
@@ -43,6 +43,7 @@ export default function Home() {
   const [searchedLinks, setSearchedLinks] = useState<Array<SearchedLinksInterface>>(
     []
   );
+  const encurtLinkInputRef = useRef<HTMLInputElement>(null);
 
   const handleGetUrl = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -55,14 +56,24 @@ export default function Home() {
           ...oldLinks,
           {
             originalLink: res.data.result.original_link,
-            shortenLink: res.data.result.short_link,
+            shortenLink: res.data.result.full_short_link,
           },
         ];
       });
     });
+
+    encurtLinkInputRef.current!.value = "";
+    setShortenItInput("");
   };
 
-  console.log(searchedLinks);
+  function copyShortenLink(e: React.MouseEvent<HTMLButtonElement>, url: string) {
+    if (navigator) {
+      navigator.clipboard.writeText(url);
+
+      e.currentTarget.disabled = true;
+      e.currentTarget.textContent = "Copied!";
+    }
+  }
 
   return (
     <>
@@ -128,6 +139,7 @@ export default function Home() {
         >
           <ShortenALinkContainer onSubmit={handleGetUrl}>
             <input
+              ref={encurtLinkInputRef}
               onChange={(e) => setShortenItInput(e.target.value)}
               type="text"
               placeholder="Shorten a link here..."
@@ -137,27 +149,18 @@ export default function Home() {
 
           {searchedLinks.map((link) => {
             return (
-              <ShortenLinkResultsContainer>
+              <ShortenLinkResultsContainer key={link.originalLink}>
                 <p>{link.originalLink}</p>
 
                 <ShortenLinkWrapper>
-                  <a>{link.shortenLink}</a>
-                  <CopyButton>Copy</CopyButton>
+                  <a href={link.shortenLink}>{link.shortenLink}</a>
+                  <CopyButton onClick={(e) => copyShortenLink(e, link.shortenLink)}>
+                    Copy
+                  </CopyButton>
                 </ShortenLinkWrapper>
               </ShortenLinkResultsContainer>
             );
           })}
-
-          {/*           <ShortenLinkResultsContainer>
-            <p>https://frontendmentor.com.br</p>
-
-            <ShortenLinkWrapper>
-              <a>httas://rel.ink/k4lKyk</a>
-              <CopyButton disabled copied={true}>
-                Copied!
-              </CopyButton>
-            </ShortenLinkWrapper>
-          </ShortenLinkResultsContainer> */}
 
           <AdvancedStatistics>
             <p>Advanced Statistics</p>

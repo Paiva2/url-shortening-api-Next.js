@@ -200,13 +200,9 @@ export const ShortenLinkWrapper = styled.div`
   }
 `;
 
-interface CopyButton {
-  copied?: boolean;
-}
-
-export const CopyButton = styled.button<CopyButton>`
+export const CopyButton = styled.button`
   all: unset;
-  background-color: ${({ copied }) => (copied ? "#4b3f6b" : "hsl(180, 66%, 49%)")};
+  background-color: hsl(180, 66%, 49%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -217,11 +213,16 @@ export const CopyButton = styled.button<CopyButton>`
   border-radius: 10px;
   font-weight: 700;
   text-align: center;
-  cursor: ${({ copied }) => (copied ? "unset" : "pointer")};
+  cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 
   &:hover:not(:disabled) {
     background-color: #9ce2e2;
+  }
+
+  &:disabled {
+    background-color: #4b3f6b;
+    cursor: unset;
   }
 `;
 

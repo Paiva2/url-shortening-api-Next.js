@@ -24,29 +24,29 @@ export const GetStartedWrapper = styled.div`
 export const GetStartedTitleWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 1.875rem;
   width: 41%;
 
   p:first-child {
     color: hsl(255, 11%, 22%);
-    font-size: 80px;
+    font-size: 5rem;
     line-height: 1.1;
     font-weight: 700;
   }
 
   p:last-child {
-    font-size: 22px;
+    font-size: 1.375rem;
     color: hsl(257, 7%, 63%);
   }
 `;
 
 export const GetStartedButton = styled.button`
   all: unset;
-  font-size: 16px;
+  font-size: 1rem;
   background-color: hsl(180, 66%, 49%);
   color: #fff;
-  border-radius: 100px;
-  padding: 15px;
+  border-radius: 6.25rem;
+  padding: 0.9375rem;
   width: 25%;
   font-weight: 700;
   display: grid;
@@ -73,7 +73,7 @@ export const MiddleContainer = styled.div`
   justify-content: center;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 1.875rem;
 `;
 
 export const ShortenALinkContainer = styled.form`
@@ -83,9 +83,9 @@ export const ShortenALinkContainer = styled.form`
   align-items: center;
   background-color: hsl(257, 27%, 26%);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1110' height='168'%3E%3Cpath fill='%234B3F6B' fill-rule='evenodd' d='M647-93.924c0 52.724 15.5 90.486 73 114.877 57.5 24.391 113.055 2.134 168.786 14.894 55.731 12.76 55.731 94.962 108.214 145.549s163.142 62.874 253.12 11.552c89.976-51.322 130.765-171.152 103.88-241.807C1327.115-119.515 1275.593-184 1027-184c-248.593 0-380 37.353-380 90.076zm-781 213c0 52.724 15.5 90.486 73 114.877 57.5 24.391 113.055 2.134 168.786 14.894 55.731 12.76 55.731 94.962 108.214 145.549s163.142 62.874 253.12 11.552C559.095 354.626 599.884 234.796 573 164.141 546.115 93.485 494.593 29 246 29c-248.593 0-380 37.353-380 90.076z'/%3E%3C/svg%3E");
-  margin-top: -70px;
-  padding: 40px;
-  gap: 20px;
+  margin-top: -4.375rem;
+  padding: 2.5rem;
+  gap: 1.25rem;
   background-size: 100% 100%;
   -o-background-size: 100% 100%;
   -webkit-background-size: 100% 100%;
@@ -95,10 +95,10 @@ export const ShortenALinkContainer = styled.form`
 
   input {
     width: 70%;
-    padding: 20px;
-    padding-left: 15px;
-    border-radius: 10px;
-    font-size: 18px;
+    padding: 1.25rem;
+    padding-left: 0.9375rem;
+    border-radius: 0.625rem;
+    font-size: 1.125rem;
     border: 0;
 
     &.error {
@@ -114,7 +114,7 @@ export const ShortenALinkContainer = styled.form`
     all: unset;
     background-color: hsl(180, 66%, 49%);
     color: #fff;
-    padding: 20px;
+    padding: 1.25rem;
     border-radius: 10px;
     font-weight: 700;
     width: 10%;
@@ -134,10 +134,10 @@ export const ShortenLinkResultsContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
-  padding: 40px;
-  gap: 20px;
+  padding: 2.5rem;
+  gap: 1.25rem;
   border-radius: 10px;
-  font-size: 20px;
+  font-size: 1.25rem;
 
   p {
     word-break: break-all;
@@ -149,7 +149,7 @@ export const ShortenLinkWrapper = styled.div`
   align-items: center;
   justify-content: center;
   color: hsl(180, 66%, 49%);
-  gap: 20px;
+  gap: 1.25rem;
 
   a:hover {
     text-decoration: underline;
@@ -164,9 +164,9 @@ export const CopyButton = styled.button`
   align-items: center;
   justify-content: center;
   color: #fff;
-  padding: 10px;
-  width: 100px;
-  height: 25px;
+  padding: 0.625rem;
+  width: 6.25rem;
+  height: 1.5625rem;
   border-radius: 10px;
   font-weight: 700;
   text-align: center;
@@ -188,13 +188,13 @@ export const AdvancedStatistics = styled.div`
   text-align: center;
 
   p:first-child {
-    font-size: 45px;
+    font-size: 2.8125rem;
     font-weight: 700;
     color: hsl(260, 8%, 14%);
   }
 
   p:last-child {
-    font-size: 18px;
+    font-size: 1.125rem;
     color: hsl(257, 7%, 63%);
   }
 `;
@@ -203,8 +203,8 @@ export const InformationCardsWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 50px;
-  gap: 40px;
+  padding-bottom: 3.125rem;
+  gap: 2.5rem;
 
   @media (min-width: 3850px) {
     height: 100vh;
@@ -213,13 +213,13 @@ export const InformationCardsWrapper = styled.div`
 
 export const InformationCards = styled.div`
   max-width: 380px;
-  padding: 30px;
+  padding: 1.875rem;
   background: #fff;
   position: relative;
 
   h1 {
     color: hsl(260, 8%, 14%);
-    margin-top: 15px;
+    margin-top: 0.9375rem;
   }
 
   p {
@@ -235,7 +235,7 @@ export const InformationCards = styled.div`
     border-radius: 99999px;
     background-color: #3b3054;
 
-    margin-top: -70px;
+    margin-top: -4.375rem;
   }
 
   &:nth-child(1) {
@@ -251,7 +251,7 @@ export const InformationCards = styled.div`
   }
 
   &:nth-child(2) {
-    margin-top: 80px;
+    margin-top: 5rem;
 
     &::after {
       content: "";
@@ -265,7 +265,7 @@ export const InformationCards = styled.div`
   }
 
   &:nth-child(3) {
-    margin-top: 160px;
+    margin-top: 10rem;
   }
 `;
 
@@ -273,7 +273,7 @@ export const BoostYourLinks = styled.div`
   width: 100%;
   display: flex;
   min-height: 300px;
-  gap: 20px;
+  gap: 1.25rem;
   color: #fff;
   align-items: center;
   justify-content: center;
@@ -286,7 +286,7 @@ export const BoostYourLinks = styled.div`
   background-size: cover;
 
   p {
-    font-size: 45px;
+    font-size: 2.8125rem;
     font-weight: 700;
   }
 
@@ -294,10 +294,10 @@ export const BoostYourLinks = styled.div`
     all: unset;
     text-align: center;
     border-radius: 9999px;
-    font-size: 18px;
-    padding: 10px;
-    width: 150px;
-    height: 25px;
+    font-size: 1.125rem;
+    padding: 0.625rem;
+    width: 9.375rem;
+    height: 1.5625rem;
     cursor: pointer;
     background-color: hsl(180, 66%, 49%);
     transition: all 0.2s ease;

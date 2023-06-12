@@ -4,9 +4,9 @@ export const Footer = styled.footer`
   width: 100%;
   background: hsl(260, 8%, 14%);
   color: #fff;
-  font-size: 18px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  font-size: 1.125rem;
+  padding-top: 3.125rem;
+  padding-bottom: 3.125rem;
 `;
 
 export const Sections = styled.div`
@@ -24,7 +24,7 @@ export const SectionsWrapper = styled.div`
   div {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 0.3125rem;
 
     p {
       cursor: pointer;
@@ -37,7 +37,7 @@ export const SectionsWrapper = styled.div`
 
     p:first-child {
       font-weight: 700;
-      margin-bottom: 15px;
+      margin-bottom: 0.9375rem;
       cursor: unset !important;
 
       &:hover {
@@ -50,11 +50,11 @@ export const SectionsWrapper = styled.div`
 export const SocialMediasWrapper = styled.div`
   display: flex;
   flex-direction: row !important;
-  gap: 20px !important;
+  gap: 1.25rem !important;
 
   svg {
-    width: 22px;
-    height: 22px;
+    width: 1.375rem;
+    height: 1.375rem;
     cursor: pointer;
     transition: all 0.2s ease;
 

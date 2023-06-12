@@ -3,10 +3,10 @@ import { styled } from "styled-components";
 export const Header = styled.header`
   width: 100%;
   display: flex;
-  font-size: 18px;
+  font-size: 1.125rem;
   align-items: center;
   justify-content: space-around;
-  padding-top: 50px;
+  padding-top: 3.125rem;
 `;
 
 export const HeaderSectionsWrapper = styled.div`
@@ -53,8 +53,8 @@ export const SignUpHeaderButton = styled.button`
   all: unset;
   color: #fff;
   background-color: hsl(180, 66%, 49%);
-  border-radius: 100px;
-  padding: 8px;
+  border-radius: 9999px;
+  padding: 0.5rem;
   font-weight: 700;
   width: 5.3125rem;
   display: grid;

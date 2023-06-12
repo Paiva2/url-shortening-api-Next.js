@@ -1,85 +1,17 @@
 import { styled } from "styled-components";
 
-export const Header = styled.header`
-  width: 100%;
-  display: flex;
-  font-size: 18px;
-  align-items: center;
-  justify-content: space-around;
-  padding-top: 50px;
-`;
-
-export const HeaderSectionsWrapper = styled.div`
-  display: flex;
-  width: 85%;
-  justify-content: space-between;
-`;
-
-export const LogoWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 1.875rem;
-
-  a {
-    color: hsl(257, 7%, 63%);
-    font-weight: 700;
-
-    &:hover {
-      color: #000;
-    }
-  }
-`;
-
-export const HeaderButtonsWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.875rem;
-`;
-
-export const LoginHeaderButton = styled.button`
-  all: unset;
-  color: hsl(257, 7%, 63%);
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.2s ease;
-
-  &:hover {
-    color: #9ce2e2;
-  }
-`;
-
-export const SignUpHeaderButton = styled.button`
-  all: unset;
-  color: #fff;
-  background-color: hsl(180, 66%, 49%);
-  border-radius: 100px;
-  padding: 8px;
-  font-weight: 700;
-  width: 5.3125rem;
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-  transition: all 0.2s ease;
-
-  &:hover {
-    background-color: #9ce2e2;
-  }
-`;
-
 export const GetStartedContainer = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  min-height: 630px;
+  min-height: 750px;
   overflow: hidden;
 
   svg {
     position: absolute;
     right: -150px;
-    top: 0;
   }
 `;
 
@@ -127,6 +59,23 @@ export const GetStartedButton = styled.button`
   }
 `;
 
+export const MainContainer = styled.main`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const MiddleContainer = styled.div`
+  background-color: #eff1f7;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+`;
+
 export const ShortenALinkContainer = styled.form`
   width: 85%;
   display: flex;
@@ -151,6 +100,14 @@ export const ShortenALinkContainer = styled.form`
     border-radius: 10px;
     font-size: 18px;
     border: 0;
+
+    &.error {
+      border: 3px solid hsl(0, 87%, 67%);
+
+      &::placeholder {
+        color: hsl(0, 87%, 67%);
+      }
+    }
   }
 
   button {
@@ -239,6 +196,18 @@ export const AdvancedStatistics = styled.div`
   p:last-child {
     font-size: 18px;
     color: hsl(257, 7%, 63%);
+  }
+`;
+
+export const InformationCardsWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+  gap: 40px;
+
+  @media (min-width: 3850px) {
+    height: 100vh;
   }
 `;
 
@@ -335,70 +304,6 @@ export const BoostYourLinks = styled.div`
 
     &:hover {
       background-color: #9ce2e2;
-    }
-  }
-`;
-
-export const Footer = styled.footer`
-  width: 100%;
-  background: hsl(260, 8%, 14%);
-  color: #fff;
-  font-size: 18px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-`;
-
-export const Sections = styled.div`
-  width: 85%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-export const SectionsWrapper = styled.div`
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-
-  div {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-
-    p {
-      cursor: pointer;
-      transition: all 0.2s ease;
-
-      &:hover {
-        color: hsl(180, 66%, 49%);
-      }
-    }
-
-    p:first-child {
-      font-weight: 700;
-      margin-bottom: 15px;
-      cursor: unset !important;
-
-      &:hover {
-        color: #fff;
-      }
-    }
-  }
-`;
-
-export const SocialMediasWrapper = styled.div`
-  display: flex;
-  flex-direction: row !important;
-  gap: 20px !important;
-
-  svg {
-    width: 22px;
-    height: 22px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-
-    &:hover {
-      color: hsl(180, 66%, 49%);
     }
   }
 `;

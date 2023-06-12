@@ -9,11 +9,15 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 500
   }
 
+  input:focus {
+    outline: none;
+  }
+
   body {
     display: flex;
-    min-height: 100vh;
+    height: 100vh;
     flex-direction: column;
-    gap: 3.75rem;
+    justify-content: space-between;
   }
 
   a {

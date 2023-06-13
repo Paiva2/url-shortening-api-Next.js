@@ -78,7 +78,7 @@ export const GetStartedTitleWrapper = styled.div`
 export const GetStartedTexts = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 0.9375rem;
 
   @media (max-width: 750px) {
     padding: 0.625rem;
@@ -161,7 +161,7 @@ export const ShortenALinkContainer = styled.form`
     button {
       padding: 0;
       width: 100%;
-      height: 50px;
+      height: 3.125rem;
     }
   }
 
@@ -202,7 +202,7 @@ export const ShortenALinkContainer = styled.form`
     @media (max-width: 880px) {
       padding: 0;
       width: 100%;
-      height: 50px;
+      height: 3.125rem;
     }
 
     &:hover {
@@ -443,7 +443,7 @@ export const BoostYourLinks = styled.div`
 
   @media (max-width: 550px) {
     p {
-      font-size: 25px;
+      font-size: 1.5625rem;
     }
   }
 

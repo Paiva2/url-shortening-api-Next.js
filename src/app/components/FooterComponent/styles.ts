@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import { styled } from "styled-components"
 
 export const Footer = styled.footer`
   width: 100%;
@@ -10,14 +10,14 @@ export const Footer = styled.footer`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
+`
 
 export const Sections = styled.div`
   width: 85%;
   display: flex;
   align-items: center;
   justify-content: center;
-`;
+`
 
 export const SectionsWrapper = styled.div`
   display: flex;
@@ -27,7 +27,7 @@ export const SectionsWrapper = styled.div`
   @media (max-width: 750px) {
     align-items: center;
     justify-content: center;
-    gap: 25px;
+    gap: 1.5625rem;
     text-align: center;
     flex-direction: column;
   }
@@ -56,7 +56,7 @@ export const SectionsWrapper = styled.div`
       }
     }
   }
-`;
+`
 
 export const SocialMediasWrapper = styled.div`
   display: flex;
@@ -73,4 +73,4 @@ export const SocialMediasWrapper = styled.div`
       color: hsl(180, 66%, 49%);
     }
   }
-`;
+`

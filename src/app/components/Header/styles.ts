@@ -27,10 +27,10 @@ export const MobileModalMenuContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 2.5rem;
     background: hsl(257, 27%, 26%);
     width: 85%;
-    padding: 30px;
+    padding: 1.875rem;
     border-radius: 10px;
     height: 100%;
 
@@ -70,7 +70,7 @@ export const MobileMenuNavWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 1.875rem;
   color: #fff;
   font-weight: 700;
 `
@@ -80,11 +80,11 @@ export const MobileButtonsWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 1.875rem;
   width: 100%;
   color: #fff;
   border-top: 1px solid hsl(257deg 22.69% 45.04%);
-  padding-top: 20px;
+  padding-top: 1.25rem;
 
   button {
     color: #fff;
@@ -148,8 +148,8 @@ export const HeaderButtonsWrapper = styled.div`
 
       .bar {
         position: absolute;
-        width: 36px;
-        height: 3px;
+        width: 2.25rem;
+        height: 0.1875rem;
         background-color: #000;
         transition: 0.5s;
       }

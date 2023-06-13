@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import { styled } from "styled-components"
 
 export const GetStartedContainer = styled.div`
   width: 100%;
@@ -10,13 +10,14 @@ export const GetStartedContainer = styled.div`
   overflow: hidden;
 
   @media (max-width: 950px) {
-    gap: 30px;
-    padding: 1.25rem;
+    gap: 3.125rem;
     flex-direction: column-reverse;
-    min-height: 1115px;
+    justify-content: flex-end;
+    min-height: 950px;
 
     svg {
       position: unset !important;
+      width: 100%;
     }
   }
 
@@ -24,7 +25,7 @@ export const GetStartedContainer = styled.div`
     position: absolute;
     right: -150px;
   }
-`;
+`
 
 export const GetStartedWrapper = styled.div`
   display: flex;
@@ -34,7 +35,7 @@ export const GetStartedWrapper = styled.div`
   @media (max-width: 950px) {
     width: 100%;
   }
-`;
+`
 
 export const GetStartedTitleWrapper = styled.div`
   display: flex;
@@ -72,7 +73,17 @@ export const GetStartedTitleWrapper = styled.div`
     font-size: 1.375rem;
     color: hsl(257, 7%, 63%);
   }
-`;
+`
+
+export const GetStartedTexts = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  @media (max-width: 750px) {
+    padding: 0.625rem;
+  }
+`
 
 export const GetStartedButton = styled.button`
   all: unset;
@@ -95,14 +106,14 @@ export const GetStartedButton = styled.button`
   &:hover {
     background-color: #9ce2e2;
   }
-`;
+`
 
 export const MainContainer = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`;
+`
 
 export const MiddleContainer = styled.div`
   background-color: #eff1f7;
@@ -117,7 +128,7 @@ export const MiddleContainer = styled.div`
     padding: 1.25rem;
     gap: 4.875rem;
   }
-`;
+`
 
 export const ShortenALinkContainer = styled.form`
   width: 85%;
@@ -141,7 +152,7 @@ export const ShortenALinkContainer = styled.form`
     padding: 1.25rem;
     width: 100%;
     margin-top: -6.25rem;
-    
+
     input {
       width: 100%;
       padding: 0.9375rem;
@@ -198,7 +209,7 @@ export const ShortenALinkContainer = styled.form`
       background-color: #9ce2e2;
     }
   }
-`;
+`
 
 export const ShortenLinkResultsContainer = styled.div`
   width: 85%;
@@ -211,10 +222,25 @@ export const ShortenLinkResultsContainer = styled.div`
   border-radius: 10px;
   font-size: 1.25rem;
 
+  @media (max-width: 850px) {
+    width: 100%;
+    flex-direction: column;
+    text-align: left;
+    gap: 0.625rem;
+    justify-content: center;
+    padding: 0;
+
+    p {
+      align-self: flex-start;
+      font-size: 1rem;
+      padding: 0.625rem 1.25rem 0px 1.25rem;
+    }
+  }
+
   p {
     word-break: break-all;
   }
-`;
+`
 
 export const ShortenLinkWrapper = styled.div`
   display: flex;
@@ -223,11 +249,26 @@ export const ShortenLinkWrapper = styled.div`
   color: hsl(180, 66%, 49%);
   gap: 1.25rem;
 
+  @media (max-width: 850px) {
+    flex-direction: column;
+    width: 100%;
+    border-top: 1px solid #d5d3d9;
+    padding: 0.9375rem 1.5625rem 0.9375rem 1.5625rem;
+    text-align: left;
+    font-size: 1rem;
+
+    a {
+      word-break: break-all;
+      font-weight: 700 !important;
+      width: 100% !important;
+    }
+  }
+
   a:hover {
     text-decoration: underline;
     cursor: pointer;
   }
-`;
+`
 
 export const CopyButton = styled.button`
   all: unset;
@@ -245,6 +286,10 @@ export const CopyButton = styled.button`
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 
+  @media (max-width: 850px) {
+    width: 100%;
+  }
+
   &:hover:not(:disabled) {
     background-color: #9ce2e2;
   }
@@ -253,7 +298,7 @@ export const CopyButton = styled.button`
     background-color: #4b3f6b;
     cursor: unset;
   }
-`;
+`
 
 export const AdvancedStatistics = styled.div`
   width: 25%;
@@ -273,7 +318,7 @@ export const AdvancedStatistics = styled.div`
     font-size: 1.125rem;
     color: hsl(257, 7%, 63%);
   }
-`;
+`
 
 export const InformationCardsWrapper = styled.div`
   display: flex;
@@ -290,7 +335,7 @@ export const InformationCardsWrapper = styled.div`
     gap: 0;
     flex-direction: column;
   }
-`;
+`
 
 export const InformationCards = styled.div`
   max-width: 380px;
@@ -371,6 +416,7 @@ export const InformationCards = styled.div`
 
     @media (max-width: 880px) {
       margin-top: 5rem;
+    }
   }
 `
 
@@ -417,4 +463,4 @@ export const BoostYourLinks = styled.div`
       background-color: #9ce2e2;
     }
   }
-`;
+`

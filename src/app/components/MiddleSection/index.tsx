@@ -4,6 +4,7 @@ import {
   CopyButton,
   GetStartedButton,
   GetStartedContainer,
+  GetStartedTexts,
   GetStartedTitleWrapper,
   GetStartedWrapper,
   InformationCards,
@@ -13,32 +14,32 @@ import {
   ShortenALinkContainer,
   ShortenLinkResultsContainer,
   ShortenLinkWrapper,
-} from "./styles";
-import { useRef, useState } from "react";
-import { apiMethod } from "../../lib/axios";
-import IllustrationWorking from "../icons/IllustrationWorking";
-import BrandRecognitionIcon from "../icons/BrandRecognitionIcon";
-import DetailedRecordsIcon from "../icons/DetailedRecordsIcon";
-import FullyCustomizableIcon from "../icons/FullyCustomizableIcon";
+} from "./styles"
+import { useRef, useState } from "react"
+import { apiMethod } from "../../lib/axios"
+import IllustrationWorking from "../icons/IllustrationWorking"
+import BrandRecognitionIcon from "../icons/BrandRecognitionIcon"
+import DetailedRecordsIcon from "../icons/DetailedRecordsIcon"
+import FullyCustomizableIcon from "../icons/FullyCustomizableIcon"
 
 interface SearchedLinksInterface {
-  originalLink: string;
-  shortenLink: string;
+  originalLink: string
+  shortenLink: string
 }
 
 const MiddleSection = () => {
-  const [shortenItInput, setShortenItInput] = useState("");
+  const [shortenItInput, setShortenItInput] = useState("")
   const [searchedLinks, setSearchedLinks] = useState<Array<SearchedLinksInterface>>(
     []
-  );
-  const [inputHasError, setInputHasError] = useState(false);
-  const encurtLinkInputRef = useRef<HTMLInputElement>(null);
+  )
+  const [inputHasError, setInputHasError] = useState(false)
+  const encurtLinkInputRef = useRef<HTMLInputElement>(null)
 
   const handleGetUrl = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+    e.preventDefault()
 
     if (!shortenItInput) {
-      return setInputHasError(true);
+      return setInputHasError(true)
     }
 
     apiMethod.get(`shorten?url=${shortenItInput}`).then((res) => {
@@ -49,21 +50,21 @@ const MiddleSection = () => {
             originalLink: res.data.result.original_link,
             shortenLink: res.data.result.full_short_link,
           },
-        ];
-      });
-    });
+        ]
+      })
+    })
 
-    encurtLinkInputRef.current!.value = "";
-    setShortenItInput("");
-    setInputHasError(false);
-  };
+    encurtLinkInputRef.current!.value = ""
+    setShortenItInput("")
+    setInputHasError(false)
+  }
 
   function copyShortenLink(e: React.MouseEvent<HTMLButtonElement>, url: string) {
     if (navigator) {
-      navigator.clipboard.writeText(url);
+      navigator.clipboard.writeText(url)
 
-      e.currentTarget.disabled = true;
-      e.currentTarget.textContent = "Copied!";
+      e.currentTarget.disabled = true
+      e.currentTarget.textContent = "Copied!"
     }
   }
 
@@ -72,25 +73,19 @@ const MiddleSection = () => {
       <GetStartedContainer>
         <GetStartedWrapper>
           <GetStartedTitleWrapper>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: "15px",
-              }}
-            >
+            <GetStartedTexts>
               <p>More than just shorter links</p>
               <p>
                 Build your brand's recognition and get detailed insights on how your
                 links are performing.
               </p>
-            </div>
+            </GetStartedTexts>
             <span>
               <GetStartedButton>Get Started</GetStartedButton>
             </span>
           </GetStartedTitleWrapper>
         </GetStartedWrapper>
-          <IllustrationWorking />
+        <IllustrationWorking />
       </GetStartedContainer>
 
       <MiddleContainer>
@@ -117,7 +112,7 @@ const MiddleSection = () => {
                 </CopyButton>
               </ShortenLinkWrapper>
             </ShortenLinkResultsContainer>
-          );
+          )
         })}
 
         <AdvancedStatistics>
@@ -169,7 +164,7 @@ const MiddleSection = () => {
         <button>Get Started</button>
       </BoostYourLinks>
     </MainContainer>
-  );
-};
+  )
+}
 
-export default MiddleSection;
+export default MiddleSection

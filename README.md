@@ -14,7 +14,7 @@ This is a solution to the [Shortly URL shortening API Challenge challenge on Fro
 
 <img src="./public/images/pc-demo2.jpg">
 
-<img src="./public/images/pc-demo3.jpg">
+<img src="./public/images/pc-demo4.jpg">
 
 <img src="./public/images/mobile-demo1.jpg">
 

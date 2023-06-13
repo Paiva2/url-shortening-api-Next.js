@@ -9,6 +9,17 @@ export const GetStartedContainer = styled.div`
   min-height: 750px;
   overflow: hidden;
 
+  @media (max-width: 950px) {
+    gap: 30px;
+    padding: 1.25rem;
+    flex-direction: column-reverse;
+    min-height: 1115px;
+
+    svg {
+      position: unset !important;
+    }
+  }
+
   svg {
     position: absolute;
     right: -150px;
@@ -19,6 +30,10 @@ export const GetStartedWrapper = styled.div`
   display: flex;
   width: 85%;
   align-items: center;
+
+  @media (max-width: 950px) {
+    width: 100%;
+  }
 `;
 
 export const GetStartedTitleWrapper = styled.div`
@@ -26,6 +41,25 @@ export const GetStartedTitleWrapper = styled.div`
   flex-direction: column;
   gap: 1.875rem;
   width: 41%;
+
+  @media (max-width: 950px) {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    span {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+    }
+
+    p:first-child {
+      font-size: 2.8125rem !important;
+    }
+  }
 
   p:first-child {
     color: hsl(255, 11%, 22%);
@@ -54,6 +88,10 @@ export const GetStartedButton = styled.button`
   cursor: pointer;
   transition: all 0.2s ease;
 
+  @media (max-width: 950px) {
+    width: 50%;
+  }
+
   &:hover {
     background-color: #9ce2e2;
   }
@@ -74,6 +112,11 @@ export const MiddleContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.875rem;
+
+  @media (max-width: 880px) {
+    padding: 1.25rem;
+    gap: 4.875rem;
+  }
 `;
 
 export const ShortenALinkContainer = styled.form`
@@ -93,6 +136,24 @@ export const ShortenALinkContainer = styled.form`
   border-radius: 10px;
   z-index: 1000;
 
+  @media (max-width: 880px) {
+    flex-direction: column;
+    padding: 1.25rem;
+    width: 100%;
+    margin-top: -6.25rem;
+    
+    input {
+      width: 100%;
+      padding: 0.9375rem;
+    }
+
+    button {
+      padding: 0;
+      width: 100%;
+      height: 50px;
+    }
+  }
+
   input {
     width: 70%;
     padding: 1.25rem;
@@ -100,6 +161,11 @@ export const ShortenALinkContainer = styled.form`
     border-radius: 0.625rem;
     font-size: 1.125rem;
     border: 0;
+
+    @media (max-width: 880px) {
+      width: 100%;
+      padding: 0.9375rem;
+    }
 
     &.error {
       border: 3px solid hsl(0, 87%, 67%);
@@ -121,6 +187,12 @@ export const ShortenALinkContainer = styled.form`
     text-align: center;
     cursor: pointer;
     transition: all 0.2s ease;
+
+    @media (max-width: 880px) {
+      padding: 0;
+      width: 100%;
+      height: 50px;
+    }
 
     &:hover {
       background-color: #9ce2e2;
@@ -187,6 +259,10 @@ export const AdvancedStatistics = styled.div`
   width: 25%;
   text-align: center;
 
+  @media (max-width: 880px) {
+    width: 100%;
+  }
+
   p:first-child {
     font-size: 2.8125rem;
     font-weight: 700;
@@ -209,6 +285,11 @@ export const InformationCardsWrapper = styled.div`
   @media (min-width: 3850px) {
     height: 100vh;
   }
+
+  @media (max-width: 880px) {
+    gap: 0;
+    flex-direction: column;
+  }
 `;
 
 export const InformationCards = styled.div`
@@ -216,6 +297,13 @@ export const InformationCards = styled.div`
   padding: 1.875rem;
   background: #fff;
   position: relative;
+
+  @media (max-width: 880px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
   h1 {
     color: hsl(260, 8%, 14%);
@@ -247,6 +335,13 @@ export const InformationCards = styled.div`
       background-color: hsl(180, 66%, 49%);
       right: -40px;
       top: 50%;
+
+      @media (max-width: 880px) {
+        right: 49%;
+        top: 100%;
+        width: 0.5rem;
+        height: 3.5rem;
+      }
     }
   }
 
@@ -261,13 +356,23 @@ export const InformationCards = styled.div`
       background-color: hsl(180, 66%, 49%);
       right: -40px;
       top: 50%;
+
+      @media (max-width: 880px) {
+        right: 49%;
+        top: 100%;
+        width: 0.5rem;
+        height: 3.5rem;
+      }
     }
   }
 
   &:nth-child(3) {
     margin-top: 10rem;
+
+    @media (max-width: 880px) {
+      margin-top: 5rem;
   }
-`;
+`
 
 export const BoostYourLinks = styled.div`
   width: 100%;
@@ -288,6 +393,12 @@ export const BoostYourLinks = styled.div`
   p {
     font-size: 2.8125rem;
     font-weight: 700;
+  }
+
+  @media (max-width: 550px) {
+    p {
+      font-size: 25px;
+    }
   }
 
   button {

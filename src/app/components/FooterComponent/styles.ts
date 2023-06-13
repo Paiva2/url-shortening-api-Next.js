@@ -7,6 +7,9 @@ export const Footer = styled.footer`
   font-size: 1.125rem;
   padding-top: 3.125rem;
   padding-bottom: 3.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const Sections = styled.div`
@@ -18,8 +21,16 @@ export const Sections = styled.div`
 
 export const SectionsWrapper = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
+
+  @media (max-width: 750px) {
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    text-align: center;
+    flex-direction: column;
+  }
 
   div {
     display: flex;

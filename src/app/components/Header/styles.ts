@@ -20,6 +20,12 @@ export const LogoWrapper = styled.div`
   align-items: center;
   gap: 1.875rem;
 
+  @media (max-width: 750px) {
+    a {
+      display: none;
+    }
+  }
+
   a {
     color: hsl(257, 7%, 63%);
     font-weight: 700;
@@ -35,6 +41,12 @@ export const HeaderButtonsWrapper = styled.div`
   align-items: center;
   justify-content: center;
   gap: 1.875rem;
+
+  @media (max-width: 750px) {
+    button {
+      display: none;
+    }
+  }
 `;
 
 export const LoginHeaderButton = styled.button`

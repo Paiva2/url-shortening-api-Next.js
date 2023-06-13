@@ -72,7 +72,13 @@ const MiddleSection = () => {
       <GetStartedContainer>
         <GetStartedWrapper>
           <GetStartedTitleWrapper>
-            <div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "15px",
+              }}
+            >
               <p>More than just shorter links</p>
               <p>
                 Build your brand's recognition and get detailed insights on how your
@@ -84,8 +90,7 @@ const MiddleSection = () => {
             </span>
           </GetStartedTitleWrapper>
         </GetStartedWrapper>
-
-        <IllustrationWorking />
+          <IllustrationWorking />
       </GetStartedContainer>
 
       <MiddleContainer>
